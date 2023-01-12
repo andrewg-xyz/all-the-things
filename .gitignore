@@ -1,3 +1,5 @@
 *.tfstate*
 .terraform
 .env
+config
+config.bak

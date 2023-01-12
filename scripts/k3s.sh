@@ -81,5 +81,5 @@ curl -sfL https://get.k3s.io | K3S_TOKEN=$K3S_TOKEN sh -s - server --cluster-ini
 # Note: kubevip as alternative to servicelb, --no-deploy servicelb
 elif [[ "$main" -eq 0 ]] && [[ -n "$K3S_TOKEN" ]] && [[ -n "$K3S_URL" ]]; then
 echo "[setup non-main k3s server]"
-curl -sfL https://get.k3s.io | K3S_TOKEN=$K3S_TOKEN INSTALL_K3S_VERSION=v1.24.3+k3s1 sh -s - server --server "$K3S_URL" --disable traefik
+curl -sfL https://get.k3s.io | K3S_TOKEN=$K3S_TOKEN sh -s - server --server "$K3S_URL" --disable traefik
 fi

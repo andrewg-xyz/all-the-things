@@ -1,17 +1,17 @@
 ## Provider (must be provided by the user of the module)
 variable "pm_api_url" {
-    description = "Proxmox API URL"
-    type        = string
+  description = "Proxmox API URL"
+  type        = string
 }
 
 variable "pm_user" {
-    description = "Proxmox API User"
-    type        = string
+  description = "Proxmox API User"
+  type        = string
 }
 
 variable "pm_password" {
-    description = "Proxmox API Password"
-    type        = string
+  description = "Proxmox API Password"
+  type        = string
 }
 
 ## Resource
@@ -47,6 +47,12 @@ variable "user_secret" {
 }
 
 ### (optionally provided by the user of the module)
+variable "vmid" {
+  description = "The ID of the virtualmachine"
+  type        = string
+  default     = 0
+}
+
 variable "qemu_agent" {
   description = "Enable qemu guest agent"
   type        = number
