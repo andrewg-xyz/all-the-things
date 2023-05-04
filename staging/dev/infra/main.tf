@@ -65,7 +65,7 @@ locals {
 }
 
 module "node0" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -96,7 +96,7 @@ resource "null_resource" "configure-node0" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -117,7 +117,7 @@ resource "null_resource" "configure-node0" {
 }
 
 module "node1" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -149,7 +149,7 @@ resource "null_resource" "configure-node1" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -168,7 +168,7 @@ resource "null_resource" "configure-node1" {
 }
 
 module "node2" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -200,7 +200,7 @@ resource "null_resource" "configure-node2" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -219,7 +219,7 @@ resource "null_resource" "configure-node2" {
 }
 
 module "node3" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -251,7 +251,7 @@ resource "null_resource" "configure-node3" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -270,7 +270,7 @@ resource "null_resource" "configure-node3" {
 }
 
 module "node4" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -302,7 +302,7 @@ resource "null_resource" "configure-node4" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -321,7 +321,7 @@ resource "null_resource" "configure-node4" {
 }
 
 module "node5" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -353,7 +353,7 @@ resource "null_resource" "configure-node5" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -372,7 +372,7 @@ resource "null_resource" "configure-node5" {
 }
 
 module "node6" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -404,7 +404,7 @@ resource "null_resource" "configure-node6" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -423,7 +423,7 @@ resource "null_resource" "configure-node6" {
 }
 
 module "node7" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -455,7 +455,7 @@ resource "null_resource" "configure-node7" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 
@@ -474,7 +474,7 @@ resource "null_resource" "configure-node7" {
 }
 
 module "node8" {
-  source = "../../modules/base_node"
+  source = "../../../modules/base_node"
 
   # Proxmox 
   pm_api_url  = var.pm_api_url
@@ -506,7 +506,7 @@ resource "null_resource" "configure-node8" {
   }
 
   provisioner "file" {
-    source      = "../../scripts/k3s.sh"
+    source      = "../../../scripts/k3s.sh"
     destination = "/tmp/k3s.sh"
   }
 

@@ -3,3 +3,5 @@
 .env
 config
 config.bak
+.DS_Store
+notes.md
