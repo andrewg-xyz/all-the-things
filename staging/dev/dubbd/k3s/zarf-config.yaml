@@ -1,0 +1,12 @@
+package:
+  create: 
+    max_package_size: "1000000000"
+    set:
+      # renovate: datasource=gitlab-tags depName=big-bang/bigbang versioning=semver registryUrl=https://repo1.dso.mil
+      bigbang_version: "2.1.0"
+  deploy:
+    set:
+      domain: agreene.dev
+      public_key_file: agreene.dev.key
+      public_cert_file: agreene.dev.cert
+      host_path: "/var/lib/rancher/k3s/storage/*"

@@ -68,13 +68,13 @@ variable "clone_template" {
 variable "memory" {
   description = "Memory for each node"
   type        = string
-  default     = "8192"
+  default     = "12288"
 }
 
 variable "cores" {
   description = "Cores for each node"
   type        = number
-  default     = 4
+  default     = 6
 }
 
 variable "os_type" {
