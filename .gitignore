@@ -7,3 +7,5 @@ config.bak
 notes.md
 staging/dev/dubbd/k3s/agreene.dev.cert
 staging/dev/dubbd/k3s/agreene.dev.key
+zarf-sbom
+zarf-package*.tar.zst
