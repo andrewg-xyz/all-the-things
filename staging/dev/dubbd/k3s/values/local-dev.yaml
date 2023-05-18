@@ -47,3 +47,12 @@ kyvernoPolicies:
           - resources:
               namespaces:
               - metallb-system
+      
+
+
+#istio:
+#  ingressGateways:
+#    public-ingressgateway:
+#      type: "NodePort"
+#    passthrough-ingressgateway:
+#      type: "NodePort"

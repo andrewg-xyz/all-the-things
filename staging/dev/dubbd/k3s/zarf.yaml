@@ -3,11 +3,12 @@ kind: ZarfPackageConfig
 metadata:
   name: big-bang-distro-k3d
   description: "Defense Unicorns Big Bang Distro"
-  version: "###ZARF_PKG_VAR_BIGBANG_VERSION###"
+  version: "###ZARF_PKG_TMPL_BIGBANG_VERSION###"
   url: https://p1.dso.mil/products/big-bang
   image: https://p1.dso.mil/img/Big_Bang_Color_Logo_White_text.de14c793.webp
   # Big Bang / Iron Bank are only amd64
   architecture: amd64
+  authors: "@MxNxPx"
   source: https://github.com/defenseunicorns/zarf-package-big-bang
   documentation: https://github.com/defenseunicorns/zarf-package-big-bang
   vendor: Defense Unicorns
@@ -31,4 +32,3 @@ components:
         version: "###ZARF_PKG_VAR_BIGBANG_VERSION###"
         valuesFiles:
         - values/local-dev.yaml
-      
