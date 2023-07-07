@@ -103,7 +103,7 @@ resource "null_resource" "configure-node0" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -158,7 +158,7 @@ resource "null_resource" "configure-node1" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -211,7 +211,7 @@ resource "null_resource" "configure-node2" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -264,7 +264,7 @@ resource "null_resource" "configure-node3" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -317,7 +317,7 @@ resource "null_resource" "configure-node4" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -370,7 +370,7 @@ resource "null_resource" "configure-node5" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -423,7 +423,7 @@ resource "null_resource" "configure-node6" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -476,7 +476,7 @@ resource "null_resource" "configure-node7" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",
@@ -529,7 +529,7 @@ resource "null_resource" "configure-node8" {
   provisioner "remote-exec" {
     inline = [
       # Having issue "(remote-exec): Warning! D-Bus connection terminated." and debugging is difficult. hoping giving the VM longer to initialize will help
-      "sleep 15",
+      "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
       "sudo mkfs.ext4 /dev/sdb",

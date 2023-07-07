@@ -3,7 +3,8 @@
 node=$1
 id=$2
 
-ubuntu_distro=kinetic
+ubuntu_distro=mantic
+
 
 apt-get update
 apt-get install -y libguestfs-tools
