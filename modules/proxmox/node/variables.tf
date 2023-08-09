@@ -16,13 +16,13 @@ variable "pm_password" {
 
 ## Resource
 ### (must be provided by the user of the module)
-variable "name" {
-  description = "The name of the virtualmachine"
-  type        = string
+variable "index" {
+  description = "Index of the node"
+  type        = number
 }
 
-variable "target_node" {
-  description = "The name of the target node"
+variable "name" {
+  description = "The name of the virtualmachine"
   type        = string
 }
 
@@ -67,7 +67,7 @@ variable "clone_template" {
 
 variable "memory" {
   description = "Memory for each node"
-  type        = string 
+  type        = string
   default     = "16384"
 }
 
