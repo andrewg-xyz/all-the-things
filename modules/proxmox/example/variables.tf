@@ -1,0 +1,9 @@
+variable "pm_api_url" {}
+variable "pm_user" {}
+variable "pm_password" {}
+variable "vm_gw" {}
+variable "user_secret" {}
+variable "pub_ssh_key_path" {}
+variable "priv_ssh_key_path" {}
+variable "vm_ip_base" {}
+variable "vm_ip_start" {}
