@@ -62,7 +62,7 @@ variable "qemu_agent" {
 variable "clone_template" {
   description = "Source template to clone"
   type        = string
-  default     = "ubuntu-ci-template"
+  default     = "ubuntu-ci-template-v2"
 }
 
 variable "memory" {
