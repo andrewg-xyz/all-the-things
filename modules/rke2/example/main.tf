@@ -16,7 +16,7 @@ provider "proxmox" {
 
 module "rke2-servers" {
   source     = "../server"
-  node_count = 3
+  node_count = 2
 
   pm_api_url  = var.pm_api_url
   pm_user     = var.pm_user
@@ -34,8 +34,8 @@ module "rke2-servers" {
 module "rke2-agents" {
   depends_on = [ module.rke2-servers ]
   source = "../agent"
-  node_count = 3
-  offset = 3 #match module.rke2-servers.node_count
+  node_count = 1
+  offset = 2 #match module.rke2-servers.node_count
   server_ip = module.rke2-servers.server_ip
   token = module.rke2-servers.token
 
