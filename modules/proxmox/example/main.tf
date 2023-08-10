@@ -15,7 +15,7 @@ provider "proxmox" {
 }
 
 module "node" {
-  count  = 11
+  count  = 1
   source = "../node"
   # Proxmox 
   pm_api_url  = var.pm_api_url

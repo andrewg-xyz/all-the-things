@@ -62,8 +62,11 @@ resource "null_resource" "configure-agent-node" {
       "sudo mkfs.ext4 /dev/sdb",
       "sudo mount /dev/sdb /var/lib/rancher",
       # install rke2
-      "sudo chmod +x /tmp/rke2-install.sh",
-      "sudo /tmp/rke2-install.sh ${var.token} ${var.server_ip} 0 1 || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
+      "sudo mkdir -p /root/rke2-artifacts",
+      "sudo cp /tmp/rke2-artifacts/* /root/rke2-artifacts/",
+      "sudo cp /tmp/rke2-install.sh /root/rke2-install.sh",
+      "sudo chmod +x /root/rke2-install.sh",
+      "sudo /root/rke2-install.sh -t ${var.token} -s ${var.server_ip} -a || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
     ]
   }
 }

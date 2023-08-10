@@ -67,8 +67,11 @@ resource "null_resource" "configure-server-node" {
       "sudo mkfs.ext4 /dev/sdb",
       "sudo mount /dev/sdb /var/lib/rancher",
       # install rke2
-      "sudo chmod +x /tmp/rke2-install.sh",
-      "sudo /tmp/rke2-install.sh ${random_string.random.result} ${module.server-node[0].node_ip} ${module.server-node[count.index].node_ip} || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
+      "sudo mkdir -p /root/rke2-artifacts",
+      "sudo cp /tmp/rke2-artifacts/* /root/rke2-artifacts/",
+      "sudo cp /tmp/rke2-install.sh /root/rke2-install.sh",
+      "sudo chmod +x /root/rke2-install.sh",
+      "sudo /root/rke2-install.sh -t ${random_string.random.result} -s ${module.server-node[0].node_ip} || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
     ]
   }
 }
