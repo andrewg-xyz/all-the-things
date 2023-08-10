@@ -71,7 +71,7 @@ resource "null_resource" "configure-server-node" {
       "sudo cp /tmp/rke2-artifacts/* /root/rke2-artifacts/",
       "sudo cp /tmp/rke2-install.sh /root/rke2-install.sh",
       "sudo chmod +x /root/rke2-install.sh",
-      "sudo /root/rke2-install.sh -t ${random_string.random.result} -s ${module.server-node[0].node_ip} || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
+      "sudo /root/rke2-install.sh -t ${random_string.random.result} -s ${module.server-node[0].node_ip} -d || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
     ]
   }
 }

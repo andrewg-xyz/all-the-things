@@ -66,7 +66,7 @@ resource "null_resource" "configure-agent-node" {
       "sudo cp /tmp/rke2-artifacts/* /root/rke2-artifacts/",
       "sudo cp /tmp/rke2-install.sh /root/rke2-install.sh",
       "sudo chmod +x /root/rke2-install.sh",
-      "sudo /root/rke2-install.sh -t ${var.token} -s ${var.server_ip} -a || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
+      "sudo /root/rke2-install.sh -t ${var.token} -s ${var.server_ip} -a -d || true", # || true because the rke2 install process handles failures. systemctl returns in error on first failure, but will retry until successful
     ]
   }
 }
