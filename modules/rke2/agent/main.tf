@@ -59,8 +59,9 @@ resource "null_resource" "configure-agent-node" {
       "sleep 20",
       # format and mount disk  
       "sudo mkdir /var/lib/rancher",
-      "sudo mkfs.ext4 /dev/sdb",
-      "sudo mount /dev/sdb /var/lib/rancher",
+      "export disk_name=`lsblk --output NAME,SIZE | grep '100G' | awk '{print $1}'`",
+      "sudo mkfs.ext4 /dev/$disk_name",
+      "sudo mount /dev/$disk_name /var/lib/rancher",
       # install rke2
       "sudo mkdir -p /root/rke2-artifacts",
       "sudo cp /tmp/rke2-artifacts/* /root/rke2-artifacts/",
