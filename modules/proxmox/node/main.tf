@@ -11,7 +11,7 @@ resource "proxmox_vm_qemu" "virtualmachine" {
   name        = var.name
   desc        = "base node"
   vmid        = var.vmid
-  target_node = "${var.index}"%2 == 0 ? "bane" : "revan"
+  target_node = "${var.index}" % 2 == 0 ? "bane" : "revan"
   pool        = ""
   ipconfig0   = "ip=${var.vm_ip}/24,gw=${var.vm_gw}"
   agent       = var.qemu_agent
