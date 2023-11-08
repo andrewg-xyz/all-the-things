@@ -15,8 +15,8 @@ provider "proxmox" {
 }
 
 locals {
-  server_node_count = 1
-  agent_node_count  = 1
+  server_node_count = 3
+  agent_node_count  = 10
   vmid_base         = 1200
 }
 

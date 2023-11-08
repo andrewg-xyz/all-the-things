@@ -1,0 +1,13 @@
+log-level: info
+architecture: amd64
+package:
+  deploy:
+    set:
+      # -- Domain name for the cluster
+      admin_domain: agreene.dev
+      # -- TLS key  
+      admin_key_file: agreene.dev.key
+      # -- TLS cert
+      admin_cert_file: agreene.dev.cert
+      # -- If set to true, force delete all resources on removal (i.e. object storage, PVCs, etc)
+      admin_ephemeral: true
