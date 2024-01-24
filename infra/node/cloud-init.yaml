@@ -1,0 +1,10 @@
+#cloud-config
+user: user
+chpasswd:
+  expire: False
+users:
+  - default
+package_upgrade: true
+
+runcmd:
+  - [ touch ~/file-touched ]

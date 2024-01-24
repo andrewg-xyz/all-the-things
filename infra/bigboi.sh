@@ -1,0 +1,1 @@
+./node/create_node.sh -n 100 -i 24 -c 8 -m 64000
