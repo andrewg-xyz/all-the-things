@@ -18,7 +18,7 @@ nodes=(
 # Iterate over the nodes and files
 for node in "${nodes[@]}"; do
     for file in "${files[@]}"; do
-        # Copy the file to the node using scp
+        echo "Copying $file to $node"
         scp -r "$file" "$node:"
     done
 done
